@@ -6,7 +6,6 @@ $usuario = "root";
 $senha = "";
 
 try {
-
     $conexao = new PDO(
         "mysql:host=$host;dbname=$banco;charset=utf8",
         $usuario,
@@ -19,7 +18,6 @@ try {
     );
 
 } catch (PDOException $erro) {
-
-    echo "Erro: " . $erro->getMessage();
-
+    die("Erro na conexão: " . $erro->getMessage());
 }
+?>
